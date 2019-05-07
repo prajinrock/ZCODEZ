@@ -1,0 +1,34 @@
+body{
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Poppins', sans-serif;
+}
+.flexBox{
+	display: flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: -moz-flex;
+}
+.outerWrapper{
+	width: 100%;
+}
+.pageWrapper{
+	width: 100%;
+	height: 100vh;
+	box-sizing: border-box;
+}
+.navBox{
+	width: 50%;
+	background-color: #333;
+}
+.navContainer{
+	width: 25%;
+	margin-left: 10%;
+	margin-top: 10%;
+}
+.logoHolder{
+	width: 100%;
+}
+.logoHolder > img{
+	width: 100%;
+}
