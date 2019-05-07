@@ -1,3 +1,6 @@
+html{
+	scroll-behavior: smooth;
+}
 body{
 	padding: 0px;
 	margin: 0px;
@@ -19,16 +22,62 @@ body{
 }
 .navBox{
 	width: 50%;
-	background-color: #333;
+	background-color: #222;
+	background-size: 100%;
 }
 .navContainer{
 	width: 25%;
-	margin-left: 10%;
-	margin-top: 10%;
+	margin-left: 5%;
+	margin-top: 5%;
+	position: fixed;
 }
 .logoHolder{
-	width: 100%;
+	width: 250px;
 }
 .logoHolder > img{
 	width: 100%;
+}
+.navlist{
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	margin-top: 50px;
+}
+.navlist li a{
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 300;
+	padding: 8px 0px;
+	display: inline-block;
+	font-size: 16px;
+}
+.navlist li a:hover, .navlist li a:focus{
+	color: #008fd5;
+	outline: none;
+}
+.BG_home{
+	background-image: url(../images/bg_home.jpg);
+	
+}
+.BG_zcodez{
+	background-image: url(../images/bg_zcodez.jpg);
+}
+.BG_strategy{
+	background-image: url(../images/bg_strategy.jpg);
+}
+.BG_capability{
+	background-image: url(../images/bg_capability.jpg);
+}
+.BG_prodfolio{
+	background-image: url(../images/bg_prodfolio.jpg);
+}
+.BG_team{
+	background-image: url(../images/bg_team.jpg);
+}
+.BG_careers{
+	background-image: url(../images/bg_strategy.jpg);
+}
+.BG_contact{
+	background-image: url(../images/bg_contact.jpg);
 }
