@@ -165,3 +165,6 @@ h1, p{
 	color: #888;
 	text-align: center;
 }
+@media only screen and (max-width: 600px) {
+  
+}
