@@ -59,8 +59,7 @@ body{
 	outline: none;
 }
 .contentBox{
-	max-width: 50%;
-	min-width: 49%;
+	width: 50%;
 }
 .webfl_column{
 	flex-direction: column;
@@ -82,7 +81,6 @@ body{
 }
 .BG_home{
 	background-image: url(../images/bg_home.jpg);
-	
 }
 .BG_zcodez{
 	background-image: url(../images/bg_zcodez.jpg);
@@ -165,6 +163,90 @@ h1, p{
 	color: #888;
 	text-align: center;
 }
+.MobMenu{
+	width: 40px;
+	height: 30px;
+	/*border: 1px solid #fff;*/
+	position: fixed;
+	z-index: 98;
+	right: 30px;
+	top: 30px;
+	/*border-radius: 3px;*/
+}
+.MobMenu span{
+	display: block;
+	height: 2px;
+	background-color: #fff;
+	margin-bottom: 6px;
+	margin-top: 5px;
+	width: 30px;
+	margin-left: 4px;
+}
+.MobMenu span:nth-child(1){
+	width: 26px;
+}
+.MobMenu span:nth-child(2){
+	width: 30px;
+}
+.MobMenu span:nth-child(3){
+	width: 24px;
+}
 @media only screen and (max-width: 600px) {
-  
+  .homeContent h1{
+  	font-size: 36px;
+  	line-height: 1;
+  }
+  .homeContent h1 br{
+  	/*display: none;*/
+  }
+  .homeContent p{
+  	font-size: 17px;
+  }
+  .pageWrapper{
+  	flex-direction: column;
+  }
+  .navBox{
+  	width: 100%;
+  	height: 35%;
+  	background-position: center;
+  }
+  .contentBox{
+  	width: 100%;
+  	height: 65%;
+  }
+  .homeContent{
+  	padding: 20px 20px;
+  }
+  .semiSection{
+  	padding: 15px 15px;
+  }
+  .semiSection{
+  	overflow: auto;
+  }
+  .semiSection h1{
+  	font-size: 32px;
+  	margin: 10px 0px;
+  }
+  .semiSection p{
+  	font-size: 14px;
+  	line-height: 1.5;
+  }
+  .iconTiles h2{
+  	font-size: 16px;
+  	margin:0px;
+  	line-height: 1;
+  	padding-top: 10px;
+  }
+  .iconTiles > div{
+  	padding-top: 10px;
+  }
+  .iconTiles > div > img{
+  	width: 30%;
+  }
+  .prodfolioImg{
+  	text-align: center;
+  }
+  .prodfolioImg > img{
+  	width: 90%;
+  }
 }
