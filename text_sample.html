@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+<style type="text/css">
+
+body{
+	background-color: hsla(290, 43%, 27%, 0.96);
+	font-family: Verdana,Geneva,sans-serif;
+}
+.txtContainer{
+	width: 50%;
+	margin:0px auto;
+}
+.txtSection{
+	width: 100%;
+	margin-bottom: 30px;	
+}
+.txtSection label{
+	display: block;
+	width: 100%;
+	font-size: 16px;
+	color: #fff;
+	padding-bottom: 10px;
+}
+.txtSection select{
+	display: block;
+	width: 100%;
+	border:2px solid hsla(290, 43%, 27%, 0.5);
+	box-sizing: border-box;
+	padding: 10px 10px;
+	font-size: 15px;
+}
+.buyBtn{
+	color: #ffffff;
+    background-color: #282b2d;
+    display: inline-block;
+    padding: 12px 25px;
+    box-shadow: 0px 5px 0px rgba(0,0,0,1);
+    border:none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all .3s;
+    outline: none;
+}
+.buyBtn:hover{
+	background-color: rgba(0,0,0,.7);
+}
+.buyAmount{
+	font-size: 20px;
+	font-weight: bold;
+	color: #e1b12c;
+	display: inline-block;
+	padding-right: 20px;
+}
+.txtContainer h2{
+	font-size: 24px;
+	color: #fff;
+	text-align: center;
+	border-bottom: 1px solid rgba(0,0,0,.4);
+	padding-bottom: 20px;
+}
+@media only screen and (max-width: 600px) {
+  	.txtContainer{
+		width: 100%;
+		padding: 20px;
+		box-sizing: border-box;
+	}
+}
+
+</style>
+
+<div class="txtContainer">
+	<h2>My Package</h2>
+	<div class="txtSection">
+		<label>Curriculam</label>
+		<select>
+			<option>Option 1</option>
+			<option>Option 2</option>
+			<option>Option 3</option>
+		</select>
+	</div>
+	<div class="txtSection">
+		<label>Grade</label>
+		<select>
+			<option>Option 1</option>
+			<option>Option 2</option>
+			<option>Option 3</option>
+		</select>
+	</div>
+	<div class="txtSection">
+		<label>Session</label>
+		<select>
+			<option>Option 1</option>
+			<option>Option 2</option>
+			<option>Option 3</option>
+		</select>
+	</div>
+	<div class="txtSection">
+		<label>Package</label>
+		<select>
+			<option>Option 1</option>
+			<option>Option 2</option>
+			<option>Option 3</option>
+		</select>
+	</div>
+	<div class="txtSection">
+		<span class="buyAmount">$ 365465.00</span><input type="button" name="" value="Buy Now" class="buyBtn">
+	</div>
+
+</div>
+
+</body>
+</html>
