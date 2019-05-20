@@ -140,33 +140,34 @@
 	<div class="section pageWrapper flexBox"  data-anchor="sixthPage">
 		<div class="navBox BG_team"></div>
 		<div class="contentBox">
-			<section id="demos">
-      <div class="row">
-        <div class="large-12 columns">
-          <div class="owl-carousel owl-theme">
-            <div class="item">
-              <h4>1</h4>
-            </div>
-            <div class="item">
-              <h4>2</h4>
-            </div>
-            <div class="item">
-              <h4>3</h4>
-            </div>
-            <div class="item">
-              <h4>4</h4>
-            </div>
-            <div class="item">
-              <h4>5</h4>
-            </div>
-            <div class="item">
-              <h4>6</h4>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </section>
+			<div class="teamDemo">
+				<section id="">
+			      <div class="row">
+			        <div class="large-12 columns">
+			          <div class="owl-carousel owl-theme">
+			            <div class="item">
+			              <div class="teamItem flexBox">
+			              	<div class="teamImage">
+			              		<img src="images/bg_contact.jpg">
+			              		<div class="teamHover"></div>
+			              	</div>
+			              </div>
+			            </div>
+			            <div class="item">
+			              <div class="teamItem">
+			              	
+			              </div>
+			            </div>
+			            <div class="item">
+			              <div class="teamItem">
+			              	
+			              </div>
+			            </div>
+			          </div>
+			        </div>
+			      </div>
+			    </section>
+			</div>
 		</div>
 	</div>
 	<div class="section pageWrapper flexBox"  data-anchor="seventhPage">
@@ -214,8 +215,8 @@
             $(document).ready(function() {
               var owl = $('.owl-carousel');
               owl.owlCarousel({
-                loop: true,
-                margin: 10,
+                loop: false,
+                margin: 0,
                 navRewind: false,
                 nav:true,
                 responsive: {
@@ -223,10 +224,10 @@
                     items: 1
                   },
                   600: {
-                    items: 3
+                    items: 1
                   },
                   1000: {
-                    items: 5
+                    items: 1
                   }
                 }
               })

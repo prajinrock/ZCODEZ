@@ -193,10 +193,47 @@ h1, p{
 }
 .prodfolioImg .slide{
   	text-align: center;
-  }
-  .prodfolioImg .slide > img{
-  	width: 90%;
-  }
+}
+.prodfolioImg .slide > img{
+	width: 90%;
+}
+.teamDemo{
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	overflow: hidden;
+	flex-wrap: wrap;
+	height: 100%;
+}
+.teamItem{
+	width: 100%;
+	height: 500px;
+	background-color: red;
+	align-items: center;
+}
+.teamDemo{
+	width: 70%;
+	margin: 15% 15% 0px 15%; 
+}
+.teamImage{
+	width: 50%;
+	position: relative;
+	margin:0px auto;
+}
+.teamImage > img{
+
+}
+.teamHover{
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	background-color: #fff;
+	height: 100%;
+	opacity: 0;
+}
+.teamImage:hover .teamHover{
+	opacity: 1;
+}
 @media only screen and (max-width: 600px) {
   .homeContent h1{
   	font-size: 36px;
