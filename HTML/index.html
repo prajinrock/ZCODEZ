@@ -8,14 +8,14 @@
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
-	<link rel="stylesheet" href="css/material.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<!-- <link rel="stylesheet" type="text/css" href="css/examples.css"> -->
 	<!--Owl Stylesheets-->
-	<link rel="stylesheet" href="css/owlCarousel/docs.theme.min.css">
+	<!-- <link rel="stylesheet" href="css/owlCarousel/docs.theme.min.css"> -->
     <link rel="stylesheet" href="css/owlCarousel/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owlCarousel/owl.theme.default.min.css">
     <!--This stylesheet-->
+    <link rel="stylesheet" href="css/material.min.css">
 	<link rel="stylesheet" type="text/css" href="css/custom.css">
 	<!--JS-->
 	
@@ -144,6 +144,7 @@
 				<section id="">
 			      <div class="row">
 			        <div class="large-12 columns">
+			        	<h2 class="teamTitle">Team</h2>
 			          <div class="owl-carousel owl-theme">
 			            <div class="item">
 			              <div class="teamItem flexBox">
@@ -154,13 +155,19 @@
 			              </div>
 			            </div>
 			            <div class="item">
-			              <div class="teamItem">
-			              	
+			              <div class="teamItem flexBox">
+			              	<div class="teamImage">
+			              		<img src="images/bg_contact.jpg">
+			              		<div class="teamHover"></div>
+			              	</div>
 			              </div>
 			            </div>
 			            <div class="item">
-			              <div class="teamItem">
-			              	
+			              <div class="teamItem flexBox">
+			              	<div class="teamImage">
+			              		<img src="images/bg_contact.jpg">
+			              		<div class="teamHover"></div>
+			              	</div>
 			              </div>
 			            </div>
 			          </div>
@@ -175,21 +182,65 @@
 		<div class="contentBox flexBox webfl_column webfl_al_center webfl_js_center">
 			<div class="semiSection">
 				<h1>CAREER</h1>
-				<p>ZCODEZ is nothing but a platform of talent and experience focused on life changing tech solutions. So we are always on the look out for more firepower in our manpower department. When applying for a role at ZCODEZ, we encourage you to link your portfolio to social networks, and showcase what makes you special.</p>
+				<p>ZCODEZ is nothing but a platform of talent and experience focused on life changing tech solutions. So we are always on the look out for more firepower in our manpower department. When applying for a role at <a href="mailto:"> ZCODEZ,</a> we encourage you to link your portfolio to social networks, and showcase what makes you special.</p>
 			</div>
 		</div>
 	</div>
 	<div class="section pageWrapper flexBox"  data-anchor="eighthPage">
 		<div class="navBox BG_contact"></div>
-		<div class="contentBox">
+		<div class="contentBox flexBox contactStack">
+				<form action="#" class="contactForm flexBox">
+				<h2 class="fullwid">GET IN TOUCH</h2>
+				
+				<div class="halfWid">
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			    		<input class="mdl-textfield__input" type="text" id="sample3">
+			    		<label class="mdl-textfield__label" for="sample3">Name</label>
+			  		</div>
+				</div>
+				<div class="halfWid">
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			    		<input class="mdl-textfield__input" type="text" id="sample3">
+			    		<label class="mdl-textfield__label" for="sample3">E-mail</label>
+			  		</div>
+				</div>
+				<div class="fullwid">
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			    		<input class="mdl-textfield__input" type="text" id="sample3">
+			    		<label class="mdl-textfield__label" for="sample3">Subject</label>
+			  		</div>
+				</div>
+				<div class="fullwid">
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			    		<input class="mdl-textfield__input" type="text" id="sample3">
+			    		<label class="mdl-textfield__label" for="sample3">Message</label>
+			  		</div>
+				</div>
+				<div class="fullwid btn_holder">
+					<!-- Accent-colored raised button with ripple -->
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Submit</button>
+				</div>
+				</form>
+				<div class="addressBar flexBox">
+					<div>
+						<h3>INDIA</h3>
+​Carmel Global Academy, 5/74,<br/>
+Angamaly, Ernakulam - 683572, IN<br/>
+CIN: U72900KL2015PTC038054
+					</div>
+					<div>
+						<h3>USA</h3>
+	4801 GUS ECKERT RD,<br/>
+	SAN ANTONIO, TEXAS - 78240<br/>
+	+1 469.224.0588
+					</div>
+				</div>
+
 			<!-- Textfield with Floating Label -->
 
-			<form action="#">
-			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-			    <input class="mdl-textfield__input" type="text" id="sample3">
-			    <label class="mdl-textfield__label" for="sample3">Text...</label>
-			  </div>
-			</form>
+			
+			  
+			
 
 		</div>
 	</div>
@@ -218,7 +269,7 @@
                 loop: false,
                 margin: 0,
                 navRewind: false,
-                nav:true,
+                nav:false,
                 responsive: {
                   0: {
                     items: 1
