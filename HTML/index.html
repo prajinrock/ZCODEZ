@@ -63,12 +63,41 @@
 	<div class="section pageWrapper flexBox"  data-anchor="firstPage">
 		<div class="navBox BG_home"></div>
 		<div class="contentBox flexBox webfl_column webfl_al_center webfl_js_center">
-			<div class="homeContent">
-				<h1>How <br/>we get it <br/>right ?</h1>
-				<p>
-				Delivering optimum results in every customer engagement is a challenge zcodez live by. We always calls for actionable insights, experiences and above all passion we develops a next-generation customer engagement center that understands customer prefe.
-				</p>
+			<div class="homeDemo">
+				<section id="">
+			      <div class="row">
+			        <div class="large-12 columns">
+			          <div class="owl-carousel owl-theme">
+			            <div class="item">
+							<div class="homeContent">
+								<h1>How <br/>we get it <br/>right ?</h1>
+								<p>
+								Delivering optimum results in every customer engagement is a challenge zcodez live by. We always calls for actionable insights, experiences and above all passion we develops a next-generation customer engagement center that understands customer prefe.
+								</p>
+							</div>
+			            </div>
+			            <div class="item">
+			              <div class="homeContent">
+								<h1>WHO<br />WE DO IT<br />FOR?</h1>
+								<p>
+								We serve global clients that span business applications for Retail, Technology, Logistics, Healthcare and Financial Service industries. Our clients get the most out of from a wealth of industry speciﬁc experience. Zcodez believes there is no better investment in goodwill than a content client.
+								</p>
+							</div>
+			            </div>
+			            <div class="item">
+			              <div class="homeContent">
+								<h1>WHY<br />ENGAGEMENT <br />MATTERS?</h1>
+								<p>
+								Working together has helped our clients to reprioritize their requirements in order to leverage maximum benefits from their business applications. Such engagements have helped companies manage themselves better and grow wholesomely.
+								</p>
+							</div>
+			            </div>
+			          </div>
+			        </div>
+			      </div>
+			    </section>
 			</div>
+			
 			
 		</div>
 	</div>
@@ -263,27 +292,35 @@ CIN: U72900KL2015PTC038054
         });
 </script>
 <script>
-            $(document).ready(function() {
-              var owl = $('.owl-carousel');
-              owl.owlCarousel({
-                loop: false,
-                margin: 0,
-                navRewind: false,
-                nav:false,
-                responsive: {
-                  0: {
-                    items: 1
-                  },
-                  600: {
-                    items: 1
-                  },
-                  1000: {
-                    items: 1
-                  }
-                }
-              })
-            })
-          </script>
+$(document).ready(function(){
+  $(".MobMenu").click(function(){
+    $(".navlist").toggle();
+    $(".MobMenu").toggleClass('activeMenu');
+  });
+});
+</script>
+<script>
+	$(document).ready(function() {
+	  var owl = $('.owl-carousel');
+	  owl.owlCarousel({
+	    loop: false,
+	    margin: 0,
+	    navRewind: false,
+	    nav:false,
+	    responsive: {
+	      0: {
+	        items: 1
+	      },
+	      600: {
+	        items: 1
+	      },
+	      1000: {
+	        items: 1
+	      }
+	    }
+	  })
+	})
+</script>
     <script src="js/owlCarousel/owl.carousel.js"></script>
 <!-- vendors -->
     <script src="js/owlCarousel/highlight.js"></script>
