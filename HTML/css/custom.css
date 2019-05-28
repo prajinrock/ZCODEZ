@@ -245,6 +245,9 @@ h1, p{
 	position: relative;
 	margin:0px auto;
 }
+.prodImage > img{
+	
+}
 .teamHover{
 	width: 100%;
 	position: absolute;
@@ -366,9 +369,9 @@ h1, p{
 	left: 0px;
 	right: 0px;
 	background-color: #ccc;
-	/*display: none;*/
+	display: none;
 	z-index: 1050;
-	display: flex;
+	/*display: flex;*/
 	align-items: center;
 	justify-content: center;
 }
