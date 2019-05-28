@@ -209,6 +209,15 @@ h1, p{
 	width: 70%;
 	margin: 10% 15% 0px 15%;
 }
+.prodDemo{
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	flex-wrap: wrap;
+	height: 100%;
+	width: 70%;
+	margin: 10% 15% 0px 15%;
+}
 .homeDemo{
 	align-items: center;
 	justify-content: center;
@@ -231,6 +240,11 @@ h1, p{
 .teamImage > img{
 
 }
+.prodImage{
+	width: 100%;
+	position: relative;
+	margin:0px auto;
+}
 .teamHover{
 	width: 100%;
 	position: absolute;
@@ -242,6 +256,10 @@ h1, p{
 	margin-top: 40px;
 }
 .teamImage:hover .teamHover{
+	opacity: 1;
+	margin-top: 0px;
+}
+.prodImage:hover .teamHover{
 	opacity: 1;
 	margin-top: 0px;
 }
@@ -324,16 +342,89 @@ h1, p{
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 }
+.succ_contact{
+	font-size: 32px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	color: #008fd4;
+	padding: 50px  20px;
+	text-align:center;
+}
+.messageNote{
+	font-size: 24px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	color: #2ecc71;
+	padding: 20px  20px;
+	text-align:center;
+}
+/*spinner*/
+.loader_div{
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: #ccc;
+	/*display: none;*/
+	z-index: 1050;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.spinner {
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #333;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
+/*spinner ends*/
 @media only screen and (max-width: 600px) {
   .homeContent h1{
   	font-size: 36px;
   	line-height: 1;
+  	margin-top: 0px;
   }
   .homeContent h1 br{
-  	/*display: none;*/
+  	display: none;
   }
   .homeContent p{
-  	font-size: 16px;
+  	font-size: 14px;
+  	line-height: 1.5;
   }
   .pageWrapper{
   	flex-direction: column;
@@ -362,7 +453,7 @@ h1, p{
   	margin: 10px 0px;
   }
   .semiSection p{
-  	font-size: 14px;
+  	font-size: 12px;
   	line-height: 1.5;
   }
   .iconTiles h2{
@@ -453,6 +544,49 @@ h1, p{
   	text-align: center;
   }
   .addressBar div br{
-  	display: none;
+  	/*display: none;*/
+  }
+  .BG_capability{
+  	height: 25%;
+  }
+  .device75{
+  	height: 75%;
+  }
+  .iconTiles h2{
+  	font-size: 13px;
+  }
+  .teamDemo{
+  	width: 100%;
+  	margin: 0px;
+  }
+  .teamItem{
+  	height: auto;
+  }
+  .BG_contact{
+  	/*height: 25%;*/
+  }
+  .contactForm h2{
+  	margin-top: 5px;
+  	margin-bottom: 10px;
+  }
+  .mdl-textfield{
+  	/*padding: 5px 0px 20px 0px;*/
+  }
+  .mdl-textfield__label{
+  	/*top: 5px;*/
+  }
+  .mdl-textfield--floating-label.is-focused .mdl-textfield__label, .mdl-textfield--floating-label.is-dirty .mdl-textfield__label, .mdl-textfield--floating-label.has-placeholder .mdl-textfield__label{
+  	/*top: -5px;*/
+  }
+  .mdl-textfield__input{
+  	font-family: 'Montserrat', sans-serif;
+  	font-size: 16px;
+  }
+  .addressBar div{
+  	/*font-size: 13px;
+  	line-height: 1.5;*/
+  }
+  .addressBar div br{
+  	/*display: none;*/
   }
 }
