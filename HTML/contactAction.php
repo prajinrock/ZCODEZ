@@ -44,7 +44,7 @@ if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response
 
 //        $mail->addCc('noushad@codeatech.com');
 
-        $mail->addAddress('prajinrock@gmail.com');
+        $mail->addAddress('bijuantonio@gmail.com');
 
         $mail->addReplyTo($email, $name);
 
@@ -56,7 +56,7 @@ if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response
 
         $mail->Subject = $subject;
 
-        $mail->Body = "Hello, you have received an enquiry from luminallc.com. Check out the details below.<br><br>"
+        $mail->Body = "Hello, you have received an enquiry from ZCODEZ Website. Check out the details below.<br><br>"
 
             . "Name: " . $name . "<br>"
 
