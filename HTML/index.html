@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/material.min.css">
 	<link rel="stylesheet" type="text/css" href="css/custom.css">
 	<!--JS-->
-	
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 	<!--endd-->
 </head>
 
@@ -55,7 +55,7 @@
 				<a href="#seventhPage">Careers</a>
 			</li>
 			<li>
-				<a href="contact.html">Get in Touch</a>
+				<a href="#eighthPage">Get in Touch</a>
 			</li>
 		</ul>
 	</div>
@@ -245,38 +245,40 @@
 			</div>
 		</div>
 	</div>
-	<div class="section pageWrapper flexBox"  data-anchor="eighthPage" style="display: none;">
+	<div class="section pageWrapper flexBox"  data-anchor="eighthPage">
 		<div class="navBox BG_contact"></div>
 		<div class="contentBox flexBox contactStack device75">
-				<form action="#" class="contactForm flexBox">
+				<form action='contactAction.php' method='post' class="contactForm flexBox">
 				<h2 class="fullwid">GET IN TOUCH</h2>
 				
 				<div class="halfWid">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-			    		<input class="mdl-textfield__input" type="text" id="sample3">
+			    		<input class="mdl-textfield__input" type="text" name="name" id="sample3">
 			    		<label class="mdl-textfield__label" for="sample3">Name</label>
 			  		</div>
 				</div>
 				<div class="halfWid">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-			    		<input class="mdl-textfield__input" type="text" id="sample3">
+			    		<input class="mdl-textfield__input" type="text" name="email" id="sample3">
 			    		<label class="mdl-textfield__label" for="sample3">E-mail</label>
 			  		</div>
 				</div>
 				<div class="fullwid">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-			    		<input class="mdl-textfield__input" type="text" id="sample3">
+			    		<input class="mdl-textfield__input" type="text" name="subject" id="sample3">
 			    		<label class="mdl-textfield__label" for="sample3">Subject</label>
 			  		</div>
 				</div>
 				<div class="fullwid">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-			    		<input class="mdl-textfield__input" type="text" id="sample3">
+			    		<input class="mdl-textfield__input" type="text" name="message" id="sample3">
 			    		<label class="mdl-textfield__label" for="sample3">Message</label>
 			  		</div>
 				</div>
-				<div class="fullwid btn_holder">
+				
+				<div class="fullwid btn_holder flexBox">
 					<!-- Accent-colored raised button with ripple -->
+					<div class="g-recaptcha" data-sitekey="6Lf6K34UAAAAAJ45mE0AgIkQvEcmYcL5UacwkKUS"></div>
 					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Submit</button>
 				</div>
 				</form>
@@ -289,8 +291,8 @@ CIN: U72900KL2015PTC038054
 					</div>
 					<div>
 						<h3>USA</h3>
-	4801 GUS ECKERT RD,<br/>
-	SAN ANTONIO, TEXAS - 78240<br/>
+	4801 Gus Eckert Rd,<br/>
+	San Antonio, Texas - 78240<br/>
 	+1 469.224.0588
 					</div>
 				</div>

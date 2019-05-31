@@ -308,6 +308,8 @@ h1, p{
 }
 .btn_holder{
 	text-align: center;
+	align-items: center;
+	justify-content: space-between;
 }
 .btn_holder .mdl-button{
 	border-radius: 30px;
@@ -418,6 +420,15 @@ h1, p{
   }
 }
 /*spinner ends*/
+@media only screen and (max-width: 1366px) {
+	.homeContent h1{
+		font-size: 42px;
+    	font-weight: 600;
+	}
+	.homeContent h1 br{
+		display: none;
+	}
+}
 @media only screen and (max-width: 1280px) {
 	
 	.homeContent{
@@ -577,7 +588,13 @@ h1, p{
   	height: auto;
   }
   .BG_contact{
-  	/*height: 25%;*/
+  	height: 20%;
+  }
+  .mdl-textfield{
+  	/*padding: 20px 0px 5px 0px;*/
+  }
+  .mdl-textfield__input{
+  	/*padding-top: 20px;*/
   }
   .contactForm h2{
   	margin-top: 5px;
@@ -597,10 +614,13 @@ h1, p{
   	font-size: 16px;
   }
   .addressBar div{
-  	/*font-size: 13px;
-  	line-height: 1.5;*/
+  	font-size: 13px;
+  	line-height: 1.5;
   }
   .addressBar div br{
-  	/*display: none;*/
+  	display: none;
+  }
+  .teamImage{
+  	width: 60%;
   }
 }
