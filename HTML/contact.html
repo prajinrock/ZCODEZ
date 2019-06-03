@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><ZCODEZ></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+	<!-- <link rel="stylesheet" type="text/css" href="css/examples.css"> -->
+	<!--Owl Stylesheets-->
+	<!-- <link rel="stylesheet" href="css/owlCarousel/docs.theme.min.css"> -->
+    <link rel="stylesheet" href="css/owlCarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owlCarousel/owl.theme.default.min.css">
+    <!--This stylesheet-->
+    <link rel="stylesheet" href="css/material.min.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	<!--JS-->
+	
+	<!--endd-->
+</head>
+
+<body>
+	<div class="MobMenu">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<div class="navContainer">
+		<div class="logoHolder">
+			<a href="#"><img src="images/zcodez_logo.svg"></a>
+		</div>
+		<ul class="navlist">
+			<li>
+				<a href="index.html#firstPage">Credo</a>
+			</li>
+			<li>
+				<a href="index.html#secondPage">Zcodez</a>
+			</li>
+			<li>
+				<a href="index.html#thirdPage">Strategy</a>
+			</li>
+			<li>
+				<a href="index.html#fourthPage">Capabilities</a>
+			</li>
+			<li>
+				<a href="index.html#fifthPage">Prodfolio</a>
+			</li>
+			<li>
+				<a href="index.html#sixthPage">Team</a>
+			</li>
+			<li>
+				<a href="index.html#seventhPage">Careers</a>
+			</li>
+			<li>
+				<a href="#">Get in Touch</a>
+			</li>
+		</ul>
+	</div>
+<div class="outerWrapper">
+	<div class="section pageWrapper flexBox"  data-anchor="eighthPage">
+		<div class="navBox BG_contact"></div>
+		<div class="contentBox flexBox contactStack">
+				<form action='contactAction.php' method='post' class="contactForm flexBox">
+				<h2 class="fullwid">GET IN TOUCH</h2>
+				
+				<div class="halfWid">
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			    		<input class="mdl-textfield__input" type="text" name="name" id="sample3">
+			    		<label class="mdl-textfield__label" for="sample3">Name</label>
+			  		</div>
+				</div>
+				<div class="halfWid">
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			    		<input class="mdl-textfield__input" type="text" name="email" id="sample3">
+			    		<label class="mdl-textfield__label" for="sample3">E-mail</label>
+			  		</div>
+				</div>
+				<div class="fullwid">
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			    		<input class="mdl-textfield__input" type="text" name="subject" id="sample3">
+			    		<label class="mdl-textfield__label" for="sample3">Subject</label>
+			  		</div>
+				</div>
+				<div class="fullwid">
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			    		<input class="mdl-textfield__input" type="text" name="message" id="sample3">
+			    		<label class="mdl-textfield__label" for="sample3">Message</label>
+			  		</div>
+				</div>
+				<div class="g-recaptcha" data-sitekey="6Lf6K34UAAAAAJ45mE0AgIkQvEcmYcL5UacwkKUS"></div>
+				<div class="fullwid btn_holder">
+					<!-- Accent-colored raised button with ripple -->
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Submit</button>
+				</div>
+				</form>
+				<div class="addressBar flexBox">
+					<div>
+						<h3>INDIA</h3>
+​Carmel Global Academy, 5/74,<br/>
+Angamaly, Ernakulam - 683572, IN<br/>
+CIN: U72900KL2015PTC038054
+					</div>
+					<div>
+						<h3>USA</h3>
+	4801 GUS ECKERT RD,<br/>
+	SAN ANTONIO, TEXAS - 78240<br/>
+	+1 469.224.0588
+					</div>
+				</div>
+
+			<!-- Textfield with Floating Label -->
+
+			
+			  
+			
+
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+<script src="js/material.min.js"></script>
+<!-- <script type="text/javascript" src="js/examples.js"></script> -->
+<script type="text/javascript">
+        $(document).ready(function () {
+            
+            $('#fullpage').fullpage({
+                verticalCentered: false,
+                //to avoid problems with css3 transforms and fixed elements in Chrome, as detailed here: https://github.com/alvarotrigo/fullPage.js/issues/208
+                css3: true,
+                anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'eighthPage'],
+                scrollBar: false,
+            });
+        });
+</script>
+<script>
+$(document).ready(function(){
+  $(".MobMenu").click(function(){
+    $(".navlist").toggle();
+    $(".MobMenu").toggleClass('activeMenu');
+  });
+});
+</script>
+<script>
+	$(document).ready(function() {
+	  var owl = $('.owl-carousel');
+	  owl.owlCarousel({
+	    loop: false,
+	    margin: 0,
+	    navRewind: false,
+	    nav:false,
+	    responsive: {
+	      0: {
+	        items: 1
+	      },
+	      600: {
+	        items: 1
+	      },
+	      1000: {
+	        items: 1
+	      }
+	    }
+	  })
+	})
+</script>
+    <script src="js/owlCarousel/owl.carousel.js"></script>
+<!-- vendors -->
+    <script src="js/owlCarousel/highlight.js"></script>
+    <script src="js/owlCarousel/app.js"></script>
+</body>
+</html>

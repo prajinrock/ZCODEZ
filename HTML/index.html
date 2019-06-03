@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Zcodez</title>
+	<title><ZCODEZ></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="images/favicon.png">
@@ -18,10 +18,58 @@
     <link rel="stylesheet" href="css/material.min.css">
 	<link rel="stylesheet" type="text/css" href="css/custom.css">
 	<!--JS-->
-	
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 	<!--endd-->
 </head>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript">
+	// Cache selectors
+var lastId,
+ topMenu = $("#mainNav"),
+ topMenuHeight = topMenu.outerHeight()+1,
+ // All list items
+ menuItems = topMenu.find("a"),
+ // Anchors corresponding to menu items
+ scrollItems = menuItems.map(function(){
+   var item = $($(this).attr("href"));
+    if (item.length) { return item; }
+ });
 
+// Bind click handler to menu items
+// so we can get a fancy scroll animation
+menuItems.click(function(e){
+  var href = $(this).attr("href"),
+      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+  $('html, body').stop().animate({ 
+      scrollTop: offsetTop
+  }, 850);
+  e.preventDefault();
+});
+
+// Bind to scroll
+$(window).scroll(function(){
+   // Get container scroll position
+   var fromTop = $(this).scrollTop()+topMenuHeight;
+   
+   // Get id of current scroll item
+   var cur = scrollItems.map(function(){
+     if ($(this).offset().top < fromTop)
+       return this;
+   });
+   // Get the id of the current element
+   cur = cur[cur.length-1];
+   var id = cur && cur.length ? cur[0].id : "";
+   
+   if (lastId !== id) {
+       lastId = id;
+       // Set/remove active class
+       menuItems
+         .parent().removeClass("active")
+         .end().filter("[href=#"+id+"]").parent().addClass("active");
+   }                   
+});
+
+</script>
 <body>
 	<div class="MobMenu">
 		<span></span>
@@ -32,8 +80,8 @@
 		<div class="logoHolder">
 			<a href="#"><img src="images/zcodez_logo.svg"></a>
 		</div>
-		<ul class="navlist">
-			<li>
+		<ul class="navlist" id="mainNav">
+			<li class="active">
 				<a href="#firstPage">Credo</a>
 			</li>
 			<li>
@@ -78,7 +126,7 @@
 			            </div>
 			            <div class="item">
 			              <div class="homeContent">
-								<h1>WHO<br />WE DO IT<br />FOR?</h1>
+								<h1>WHO<br /> WE DO IT<br /> FOR?</h1>
 								<p>
 								We serve global clients that span business applications for Retail, Technology, Logistics, Healthcare and Financial Service industries. Our clients get the most out of from a wealth of industry speciﬁc experience. Zcodez believes there is no better investment in goodwill than a content client.
 								</p>
@@ -86,7 +134,7 @@
 			            </div>
 			            <div class="item">
 			              <div class="homeContent">
-								<h1>WHY<br />ENGAGEMENT <br />MATTERS?</h1>
+								<h1>WHY<br /> ENGAGEMENT <br /> MATTERS?</h1>
 								<p>
 								Working together has helped our clients to reprioritize their requirements in order to leverage maximum benefits from their business applications. Such engagements have helped companies manage themselves better and grow wholesomely.
 								</p>
@@ -123,7 +171,7 @@
 	</div>
 	<div class="section pageWrapper flexBox"  data-anchor="fourthPage">
 		<div class="navBox BG_capability"></div>
-		<div class="contentBox flexBox webfl_column webfl_al_center webfl_js_center">
+		<div class="contentBox flexBox webfl_column webfl_al_center webfl_js_center device75">
 			<div class="semiSection">
 				<h1>CAPABILITIES</h1>
 				<p>Good practices and excellent codes are crucial to a sound digital business performance. From project creation to launch, zcodez employ the latest technologies that help us create our client's digital business on time and within budget. We specialize in the newest technologies of development in mobile applications, e-commerce, and graphics and utilize responsible development practices, which help the company achieve these goals. Good web design is not just about pretty pixels. It's about proportions, layouts and how information flows. zcodez can help digitalize your business throus.</p>
@@ -159,10 +207,40 @@
 	<div class="section pageWrapper flexBox"  data-anchor="fifthPage">
 		<div class="navBox BG_prodfolio"></div>
 		<div class="contentBox  flexBox webfl_column webfl_al_center webfl_js_center">
-			<div class="prodfolioImg prodfolio_slide slider">
-				<div class="slide"><img src="images/work-1.png"></div>
-				<div class="slide"><img src="images/work-1.png"></div>
-				<div class="slide"><img src="images/work-1.png"></div>
+			<div class="teamDemo">
+				<section id="">
+			      <div class="row">
+			        <div class="large-12 columns">
+			        	<h2 class="teamTitle">Prodfolio</h2>
+			          <div class="owl-carousel owl-theme">
+			            <div class="item">
+			              <div class="teamItem flexBox">
+			              	<div class="prodImage">
+			              		<img src="images/work-1.jpg">
+			              		<div class="teamHover"></div>
+			              	</div>
+			              </div>
+			            </div>
+			            <div class="item">
+			              <div class="teamItem flexBox">
+			              	<div class="prodImage">
+			              		<img src="images/work-2.jpg">
+			              		<div class="teamHover"></div>
+			              	</div>
+			              </div>
+			            </div>
+			            <div class="item">
+			              <div class="teamItem flexBox">
+			              	<div class="prodImage">
+			              		<img src="images/work-3.jpg">
+			              		<div class="teamHover"></div>
+			              	</div>
+			              </div>
+			            </div>
+			          </div>
+			        </div>
+			      </div>
+			    </section>
 			</div>
 		</div>
 	</div>
@@ -178,7 +256,7 @@
 			            <div class="item">
 			              <div class="teamItem flexBox">
 			              	<div class="teamImage">
-			              		<img src="images/bg_contact.jpg">
+			              		<img src="images/team-1.jpg">
 			              		<div class="teamHover"></div>
 			              	</div>
 			              </div>
@@ -186,7 +264,7 @@
 			            <div class="item">
 			              <div class="teamItem flexBox">
 			              	<div class="teamImage">
-			              		<img src="images/bg_contact.jpg">
+			              		<img src="images/team-2.jpg">
 			              		<div class="teamHover"></div>
 			              	</div>
 			              </div>
@@ -194,7 +272,7 @@
 			            <div class="item">
 			              <div class="teamItem flexBox">
 			              	<div class="teamImage">
-			              		<img src="images/bg_contact.jpg">
+			              		<img src="images/team-3.jpg">
 			              		<div class="teamHover"></div>
 			              	</div>
 			              </div>
@@ -210,43 +288,45 @@
 		<div class="navBox BG_careers"></div>
 		<div class="contentBox flexBox webfl_column webfl_al_center webfl_js_center">
 			<div class="semiSection">
-				<h1>CAREER</h1>
-				<p>ZCODEZ is nothing but a platform of talent and experience focused on life changing tech solutions. So we are always on the look out for more firepower in our manpower department. When applying for a role at <a href="mailto:"> ZCODEZ,</a> we encourage you to link your portfolio to social networks, and showcase what makes you special.</p>
+				<h1>CAREERS</h1>
+				<p>ZCODEZ is nothing but a platform of talent and experience focused on life changing tech solutions. So we are always on the look out for more firepower in our manpower department. When applying for a role at <a href="mailto:bijuantonio@gmail.com" target="blank"> ZCODEZ,</a> we encourage you to link your portfolio to social networks, and showcase what makes you special.</p>
 			</div>
 		</div>
 	</div>
 	<div class="section pageWrapper flexBox"  data-anchor="eighthPage">
 		<div class="navBox BG_contact"></div>
-		<div class="contentBox flexBox contactStack">
-				<form action="#" class="contactForm flexBox">
+		<div class="contentBox flexBox contactStack device75">
+				<form action='contactAction.php' method='post' class="contactForm flexBox">
 				<h2 class="fullwid">GET IN TOUCH</h2>
 				
 				<div class="halfWid">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-			    		<input class="mdl-textfield__input" type="text" id="sample3">
+			    		<input class="mdl-textfield__input" type="text" name="name" id="sample3">
 			    		<label class="mdl-textfield__label" for="sample3">Name</label>
 			  		</div>
 				</div>
 				<div class="halfWid">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-			    		<input class="mdl-textfield__input" type="text" id="sample3">
+			    		<input class="mdl-textfield__input" type="text" name="email" id="sample3">
 			    		<label class="mdl-textfield__label" for="sample3">E-mail</label>
 			  		</div>
 				</div>
 				<div class="fullwid">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-			    		<input class="mdl-textfield__input" type="text" id="sample3">
+			    		<input class="mdl-textfield__input" type="text" name="subject" id="sample3">
 			    		<label class="mdl-textfield__label" for="sample3">Subject</label>
 			  		</div>
 				</div>
 				<div class="fullwid">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-			    		<input class="mdl-textfield__input" type="text" id="sample3">
+			    		<input class="mdl-textfield__input" type="text" name="message" id="sample3">
 			    		<label class="mdl-textfield__label" for="sample3">Message</label>
 			  		</div>
 				</div>
-				<div class="fullwid btn_holder">
+				
+				<div class="fullwid btn_holder flexBox">
 					<!-- Accent-colored raised button with ripple -->
+					<div class="g-recaptcha" data-sitekey="6Lf6K34UAAAAAJ45mE0AgIkQvEcmYcL5UacwkKUS"></div>
 					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Submit</button>
 				</div>
 				</form>
@@ -259,8 +339,8 @@ CIN: U72900KL2015PTC038054
 					</div>
 					<div>
 						<h3>USA</h3>
-	4801 GUS ECKERT RD,<br/>
-	SAN ANTONIO, TEXAS - 78240<br/>
+	4801 Gus Eckert Rd,<br/>
+	San Antonio, Texas - 78240<br/>
 	+1 469.224.0588
 					</div>
 				</div>
@@ -275,10 +355,31 @@ CIN: U72900KL2015PTC038054
 	</div>
 </div>
 
+<div class="loader_div" id="preloadr">
+  Welcome to ZCODEZ
+  <div class="spinner">
+    <div class="bounce1"></div>
+    <div class="bounce2"></div>
+    <div class="bounce3"></div>
+  </div>
+</div>
+
 <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="js/jquery.fullPage.js"></script>
 <script src="js/material.min.js"></script>
 <!-- <script type="text/javascript" src="js/examples.js"></script> -->
+<script>
+	// $(window).load(function(){
+	// 	$("#preloadr").hide();
+	// });
+	$(document).ready(function(){
+	  $(".MobMenu").click(function(){
+	    $(".navlist").toggle();
+	    $(".MobMenu").toggleClass('activeMenu');
+	  });
+	});
+
+</script>
 <script type="text/javascript">
         $(document).ready(function () {
             
@@ -291,14 +392,7 @@ CIN: U72900KL2015PTC038054
             });
         });
 </script>
-<script>
-$(document).ready(function(){
-  $(".MobMenu").click(function(){
-    $(".navlist").toggle();
-    $(".MobMenu").toggleClass('activeMenu');
-  });
-});
-</script>
+
 <script>
 	$(document).ready(function() {
 	  var owl = $('.owl-carousel');
@@ -319,7 +413,7 @@ $(document).ready(function(){
 	      }
 	    }
 	  })
-	})
+	});
 </script>
     <script src="js/owlCarousel/owl.carousel.js"></script>
 <!-- vendors -->
