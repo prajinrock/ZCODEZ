@@ -34,7 +34,7 @@ body{
 	color: #fff;
 }
 .logoHolder{
-	width: 250px;
+	width: 160px;
 }
 .logoHolder > img{
 	width: 100%;
@@ -52,7 +52,7 @@ body{
 	font-weight: 300;
 	padding: 8px 0px;
 	display: inline-block;
-	font-size: 16px;
+	font-size: 13px;
 }
 .navlist li a:hover, .navlist li a:focus{
 	color: #008fd5;
@@ -98,7 +98,7 @@ body{
 	background-image: url(../images/bg_team.jpg);
 }
 .BG_careers{
-	background-image: url(../images/bg_strategy.jpg);
+	background-image: url(../images/bg_career.jpg);
 }
 .BG_contact{
 	background-image: url(../images/bg_contact.jpg);
@@ -108,7 +108,7 @@ body{
 }
 .homeContent h1{
 	color: #008fd4;
-	font-size: 50px;
+	font-size: 42px;
 	font-weight: 800;
 	text-transform: uppercase;
 	text-align: center;
@@ -123,7 +123,7 @@ h1, p{
 }
 .homeContent p{
 	text-align: center;
-	font-size: 18px;
+	font-size: 14px;
 	color: #777;
 	font-weight: 400;
 	line-height: 1.5;
@@ -137,7 +137,7 @@ h1, p{
 	color: #008fd4;
 }
 .semiSection p{
-	font-size: 16px;
+	font-size: 14px;
 	color: #888;
 	line-height: 26px;
 }
@@ -158,7 +158,7 @@ h1, p{
 	padding-top: 10px;
 }
 .iconTiles h2{
-	font-size: 18px;
+	font-size: 14px;
 	font-weight: 400;
 	color: #888;
 	text-align: center;
@@ -336,7 +336,8 @@ h1, p{
 }
 .addressBar div{
 	width: 48%;
-	line-height: 28px;
+	/*line-height: 28px;*/
+	font-size: 14px;
 }
 .addressBar div:nth-child(2){
 	text-align: right;
@@ -622,5 +623,8 @@ h1, p{
   }
   .teamImage{
   	width: 60%;
+  }
+  .btn_holder .g-recaptcha, .btn_holder iframe, .btn_holder .g-recaptcha > div{
+  	width: 200px !important;
   }
 }
