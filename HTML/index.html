@@ -23,52 +23,29 @@
 </head>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript">
-	// Cache selectors
-var lastId,
- topMenu = $("#mainNav"),
- topMenuHeight = topMenu.outerHeight()+1,
- // All list items
- menuItems = topMenu.find("a"),
- // Anchors corresponding to menu items
- scrollItems = menuItems.map(function(){
-   var item = $($(this).attr("href"));
-    if (item.length) { return item; }
- });
 
-// Bind click handler to menu items
-// so we can get a fancy scroll animation
-menuItems.click(function(e){
-  var href = $(this).attr("href"),
-      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
-  $('html, body').stop().animate({ 
-      scrollTop: offsetTop
-  }, 850);
-  e.preventDefault();
+	$(window).bind('mousewheel', function(e){
+    var a = $('#div2').offset();
+	if( a.Top == 0)
+	{
+alert('Top');
+	}
+	else
+	{
+
+	}
 });
-
-// Bind to scroll
-$(window).scroll(function(){
-   // Get container scroll position
-   var fromTop = $(this).scrollTop()+topMenuHeight;
-   
-   // Get id of current scroll item
-   var cur = scrollItems.map(function(){
-     if ($(this).offset().top < fromTop)
-       return this;
-   });
-   // Get the id of the current element
-   cur = cur[cur.length-1];
-   var id = cur && cur.length ? cur[0].id : "";
-   
-   if (lastId !== id) {
-       lastId = id;
-       // Set/remove active class
-       menuItems
-         .parent().removeClass("active")
-         .end().filter("[href=#"+id+"]").parent().addClass("active");
-   }                   
-});
-
+// 	$(document).ready(function() {
+// 	var a = $('#div2').offset();
+// 	if( a.Top == 0)
+// 	{
+// alert('Top');
+// 	}
+// 	else
+// 	{
+// alert('Else');
+// 	}
+// });
 </script>
 <body>
 	<div class="MobMenu">
@@ -150,7 +127,7 @@ $(window).scroll(function(){
 		</div>
 	</div>
 	<div class="section pageWrapper flexBox"  data-anchor="secondPage">
-		<div class="navBox BG_zcodez"></div>
+		<div class="navBox BG_zcodez" id="div2"></div>
 		<div class="contentBox flexBox webfl_column webfl_al_center webfl_js_center">
 			<div class="semiSection">
 				<h1>ZCODEZ</h1>
