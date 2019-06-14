@@ -32,41 +32,46 @@
 	</div>
 	<div class="navContainer">
 		<div class="logoHolder">
-			<a href="#firstPage"><img src="images/zcodez_logo.svg"></a>
+			<a href="#"><img src="images/zcodez_logo.svg"></a>
 		</div>
-		<ul class="navlist" id="menu">
+		<ul id="menu">
+			<li data-menuanchor="firstPage" class="active"><a href="#firstPage">First slide</a></li>
+			<li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
+			<li data-menuanchor="thirdPage"><a href="#thirdPage">Third slide</a></li>
+		</ul>
+		<ul class="navlist" id="mainNav">
 			<li class="active" data-menuanchor="firstPage">
-				<a href="#firstPage">Credo<div class="lineFly"></div></a>
-				
+				<a href="#firstPage">Credo</a>
 			</li>
-			<li data-menuanchor="secondPage">
-				<a href="#secondPage">Zcodez<div class="lineFly"></div></a>
+			<li>
+				<a href="#secondPage">Zcodez</a>
 			</li>
-			<li data-menuanchor="thirdPage">
-				<a href="#thirdPage">Strategy<div class="lineFly"></div></a>
+			<li>
+				<a href="#thirdPage">Strategy</a>
 			</li>
-			<li data-menuanchor="fourthPage">
-				<a href="#fourthPage">Capabilities<div class="lineFly"></div></a>
+			<li>
+				<a href="#fourthPage">Capabilities</a>
 			</li>
-			<li data-menuanchor="fifthPage">
-				<a href="#fifthPage">Prodfolio<div class="lineFly"></div></a>
+			<li>
+				<a href="#fifthPage">Prodfolio</a>
 			</li>
-			<li data-menuanchor="sixthPage">
-				<a href="#sixthPage">Team<div class="lineFly"></div></a>
+			<li>
+				<a href="#sixthPage">Team</a>
 			</li>
-			<li data-menuanchor="seventhPage">
-				<a href="#seventhPage">Careers<div class="lineFly"></div></a>
+			<li>
+				<a href="#seventhPage">Careers</a>
 			</li>
-			<li data-menuanchor="eighthPage">
-				<a href="#eighthPage">Get in Touch<div class="lineFly"></div></a>
+			<li>
+				<a href="#eighthPage">Get in Touch</a>
 			</li>
 		</ul>
 	</div>
+	
 <div class="outerWrapper" id="fullpage">
 	<div class="section pageWrapper flexBox"  data-anchor="firstPage">
 		<div class="navBox BG_home"></div>
 		<div class="contentBox flexBox webfl_column webfl_al_center webfl_js_center">
-			<div class="homeDemo flexBox">
+			<div class="homeDemo">
 				<section id="">
 			      <div class="row">
 			        <div class="large-12 columns">
@@ -336,17 +341,51 @@ CIN: U72900KL2015PTC038054
 
 </script>
 <script type="text/javascript">
-        $(document).ready(function () {
-            
-            $('#fullpage').fullpage({
-                verticalCentered: false,
-                //to avoid problems with css3 transforms and fixed elements in Chrome, as detailed here: https://github.com/alvarotrigo/fullPage.js/issues/208
-                css3: true,
-                anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'eighthPage'],
-                scrollBar: false,
-                menu: '#menu'
-            });
-        });
+    var deleteLog = false;
+
+    var myFullpage = new fullpage('#fullpage', {
+        v2compatible: true,
+        sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+        anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+        menu: '#menu',
+        onLeave: function(index, nextIndex, direction){
+            if(deleteLog){
+                document.getElementById('callbacksDiv').innerHTML = '';
+            }
+            document.getElementById('callbacksDiv').innerHTML += '<p>onLeave - index:' + index + ' nextIndex:' + nextIndex + ' direction:' + direction + '</p>';
+
+            console.log("onLeave--" + "index: " + index + " nextIndex: " + nextIndex + " direction: " +  direction);
+        },
+        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
+            if(deleteLog){
+                document.getElementById('callbacksDiv').innerHTML = '';
+            }
+            document.getElementById('callbacksDiv').innerHTML += '<p>onSlideLeave - anchorLink:' + anchorLink + " index:" + index + " slideIndex:" + slideIndex +" direction:" + direction + " nextSlideIndex:" + nextSlideIndex + '</p>';
+            console.log("onSlideLeave--" + "anchorLink: " + anchorLink + " index: " + index + " slideIndex: " + slideIndex + " direction: " + direction);
+        },
+        afterRender: function(){
+            document.getElementById('callbacksDiv').innerHTML += '<p>afterRender</p>';
+            console.log("afterRender");
+        },
+        afterResize: function(){
+            document.getElementById('callbacksDiv').innerHTML += '<p>afterResize</p>';
+            console.log("afterResize");
+        },
+        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+            document.getElementById('callbacksDiv').innerHTML += '<p>afterSlideLoad - anchorLink:' + anchorLink + " index:" + index + " slideAnchor:" + slideAnchor +" slideIndex:" + slideIndex + '</p>';
+            deleteLog = true;
+            console.log("afterSlideLoad--" + "anchorLink: " + anchorLink + " index: " + index + " slideAnchor: " + slideAnchor + " slideIndex: " + slideIndex);
+            console.log("----------------");
+        },
+        afterLoad: function(anchorLink, index){
+            console.log("after Load  " + index);
+            document.getElementById('callbacksDiv').innerHTML += '<p>afterLoad - anchorLink:' + anchorLink + " index:" + index + '</p>';
+            deleteLog = true;
+            console.log('===============');
+            console.log("afterLoad--" + "anchorLink: " + anchorLink + " index: " + index );
+        }
+    });
+
 </script>
 
 <script>
@@ -357,9 +396,6 @@ CIN: U72900KL2015PTC038054
 	    margin: 0,
 	    navRewind: false,
 	    nav:false,
-	    autoplay:true,
-		autoplayTimeout:3000,
-		autoplayHoverPause:true,
 	    responsive: {
 	      0: {
 	        items: 1

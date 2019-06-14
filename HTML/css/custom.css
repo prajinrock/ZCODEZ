@@ -54,9 +54,33 @@ body{
 	display: inline-block;
 	font-size: 13px;
 }
-.navlist li a:hover, .navlist li a:focus{
+.navlist li.active a{
 	color: #008fd5;
 	outline: none;
+}
+.lineFly{
+	width: 100%;
+	height: 1px;
+	background-color:#008fd5;
+	display: block;
+	transition: all .3s;
+	animation: flyOut .5s;
+	margin-left: -150px;
+	opacity: 0;
+}
+.navlist li.active a .lineFly{
+	display: block;
+	animation: flyLine .5s;
+	margin-left: 0px;
+	opacity: 1;
+}
+@keyframes flyLine{
+	0%{margin-left: -100px; opacity: 0;}
+	100%{margin-left: 0px; opacity: 1;}
+}
+@keyframes flyOut{
+	0%{margin-left: 0px; opacity: 1;}
+	100%{margin-left: -100px;opacity: 0;}
 }
 .contentBox{
 	width: 50%;
@@ -227,7 +251,10 @@ h1, p{
 	flex-wrap: wrap;
 	height: 90%;
 	width: 94%;
-	margin: 10% 3% 0px 3%;
+	margin: 0% 3% 0px 3%;
+}
+.homeDemo section{
+	width: 100%;
 }
 .teamItem{
 	width: 100%;
@@ -313,7 +340,7 @@ h1, p{
 }
 .btn_holder .mdl-button{
 	border-radius: 30px;
-	padding: 7px 45px;
+	padding: 5px 20px;
 	font-size: 16px;
 	height: auto;
 }
@@ -526,8 +553,9 @@ h1, p{
   	display: block;
   }
   .navlist li{
-  	border-bottom: 1px solid rgba(0,143,213,.2);
+  	/*border-bottom: 1px solid rgba(0,143,213,.2);*/
   }
+
   .activeMenu span{
 	background-color: rgba(0,143,213,1);
   }
