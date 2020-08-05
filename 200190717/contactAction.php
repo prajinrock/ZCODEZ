@@ -4,7 +4,7 @@
 
 if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) {
 
-    $secret = '6Lf6K34UAAAAAIT8LO2RMheSvO8atXah_rGuj7IQ';
+    $secret = '6LdF-rsUAAAAALNrfdYNdu-JN1_xmNF3KkvineVa';
 
     $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secret . '&response=' . $_POST['g-recaptcha-response']);
 
